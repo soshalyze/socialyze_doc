@@ -114,11 +114,55 @@
 
 ### 2.1 Vision
 
-## 2.2 Product perspective
+Socialyze will offer its users an online interface that allows them to extract data from their social media profiles by entering their user data or connecting the app to their social media accounts.
+Users can then create visualizations from these datasets that allow them to gain insights into their social media activities.
+For example, a Reddit user will be able to create a ranking of their most posted to or commented on subreddits, a word cloud of their comments,
+or correlate the number of upvotes on a post or comment with the subreddit the content was posted on.
 
-### 2.3 User characteristics
+The app will consist of a web presence created in Python's *Django* framework.
+The site will allow users to save their social media datasets to a server-side database.
+From there, the data can be reused on subsequent visits.
+Users will be able to choose one or more datasets and a compatible visualization, which the app will then create and display.
+From there, a user will have the option to export the visualization and save a local copy.
+
+## 2.2 Product Perspective
+
+Socialyze is a webapp, i.e. an online presence accessed by users via a web browser.
+It will include the following features:
+
+* **User accounts** - Users will be able to create an account on the site.
+  Users may then add various social media identities (providers tbd) to their account.
+  Depending on the accounts added, users will then have access to various datasets mined from their social media presence.
+* **Visualization toolbox** - A user will be able to select datasets from his social media presence and visualization types
+  (e.g. bar graphs, time-series graphs, pie charts).
+  The app will then create a visualization conforming to the user's specifications.
+* **Database** - User datasets scraped or collected from the social network API will be stored in the app's database,
+  where users will be able to access them on subsequent logins.
+* **Export** - Users will be able to export and save the visualizations they create in common file formats (PNG, PDF).
+* **Data filtering** - Users will be able to filter datasets by certain criteria, such as their age or content.
+
+### 2.3 User Characteristics
+
+The user needs a modern graphical web browser and access to the internet in order to use Socialyze.
+While a fundamental understanding of information visualization is certainly useful,
+the goal of the app is to provide an interface that enables lay users to create interesting visualizations.
+Additionally, the user will need to supply one or more social media identities.
+Therefore, in order to meaningfully use the application, a user must have at least one account on a social media site supported by Socialyze.
 
 ### 2.4 Dependencies
+
+Socialyze is heavily dependent on the social media sites it draws its datasets from.
+In particular, this means that the app is very dependent on the APIs it uses to query data from social media sites.
+If a site does not supply a certain data point (e.g. a channel's exact subscriber count on YouTube, as of September 2019),
+then the data point cannot be made available to users.
+Since a certain amount of data will almost surely be obtained through webscraping,
+the app's functionality will also be impacted by possible overhauls or redesign efforts on part of its data source pages.
+
+On the user side, the app is dependent on the type of web browser used.
+A browser that does not support HTML5 will struggle to correctly display the content of Socialyze.
+Socialyze is, for obvious reasons, incompatible with a text-based webbrowser.
+For development purposes, the team will limit itself to developing the app for use with the current versions of three widely used webbrowsers:
+Mozilla Firefox, Google Chrome, and Microsoft Edge (as of 18/10/2020).
 
 ## 3. Specific Requirements
 

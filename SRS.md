@@ -195,6 +195,36 @@ The user update page gives the user the possibility to change his data and to ad
 * **Password reset**
 To reset the password a mail with an activation key will be sent to the user (like the user activation mail in user creation) than the user gets access to the reset password page, where he is able to reset the password.
 
+#### 3.2.3 User Visualization Interface
+
+It is an interface necessary which provide different visualization methods for the user.
+With the interface the user can request different datasets from the database.
+
+##### 3.2.3.1 Select different datasets from database
+
+Through the fact that the user can filter information.
+The interface needs the possibility to get specific datasets from the database.
+For this the component must provide different methods for every kind of dataset which is requested.
+
+##### 3.2.3.2 Selection of different views
+
+One more requirement are the different views for the visualization.
+The user can use different options to see and filter the datasets. 
+
+### 3.2.4 Data Visualization Module
+
+To receive all the information from the database there is an additional module required.
+With this module the specific datasets from the database are moved to visualization interface.
+
+#### 3.2.4.1 Fetch data from database
+
+A very important point is to read only the necessary information from the database.
+To reduce workload from fetch data it is required to develop corresponding methods.
+
+#### 3.2.4.2 Transform data to user specification
+
+It is necessary that the visualization Interface understand the transferred data from the visualization module.
+On this case something like a protocol is required.
 ### 3.3 Usability
 
 ### 3.4 Reliability

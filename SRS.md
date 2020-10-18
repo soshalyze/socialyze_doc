@@ -24,14 +24,14 @@
     -   [3. Specific Requirements](#3-specific-requirements)
 
         -   [3.1 Functionality - Backend](#31-functionality--data-backend)
+            -   [3.1.1 Data Acquisition Modul](#311-data-acquisition-modul)  
+            -   [3.1.2 Data Visualization Module](#312-data-visualization-module)
 
         -   [3.2 Functionality - Frontend](#32-functionality--user-interface)
 
-            -   [3.2.1 Data Acquisition Modul](#321-Data-Acquisition-Modul)
-            -   [3.2.2 Account Management](#322-Account-Management)
-            -   [3.2.3 User Visualization Interface](#323-User-Visualization-Interface)
-            -   [3.2.4 Data Visualization Module](#324-Data-Visualization-Module)
-
+            -   [3.2.1 Account Management](#321-account-management)
+            -   [3.2.2 User Visualization Interface](#322-user-visualization-interface)
+   
         -   [3.3 Usability](#33-usability)
 
         -   [3.4 Reliability](#34-reliability)
@@ -53,9 +53,7 @@
         -   [3.7 Design Constraints](#37-design-constraints)
 
             -   [3.7.1 Development tools](#371-development-tools)
-            -   [3.7.2 Spring Boot](#372-spring-boot)
-            -   [3.7.3 ReactJS](#373-reactjs)
-            -   [3.7.4 Supported Platforms](#374-supported-platforms)
+            -   [3.7.2 Supported Platforms](#372-supported-platforms)
 
         -   [3.8 Online User Documentation and Help System Requirements](#38-online-user-documentation-and-help-system-requirements)
 
@@ -181,15 +179,7 @@ Mozilla Firefox, Google Chrome, and Microsoft Edge (as of 18/10/2020).
 
 ### 3.1 Functionality � Data Backend
 
-#### 3.1.1 Read data given over API endpoints
-
-#### 3.1.2 Parse data
-
-#### 3.1.3 Provide data
-
-### 3.2 Functionality � User Interface
-
-#### 3.2.1 Data Acquisition Module
+#### 3.1.1 Data Acquisition Module
 
 * **Retrieve data from Social Media** - 
 For Data visualization we need lots of data, which is needed to question from social media platforms.
@@ -205,7 +195,22 @@ If we question this Data via scraping, we do simulate normal access to the socia
 * **Write to DB** -
 After getting the data from social Media we’re going to write the scraped data to our Database, that we can visualize this data later.
 
-#### 3.2.2 Account Management
+### 3.1.2 Data Visualization Module
+
+To receive all the information from the database there is an additional module required.
+With this module the specific datasets from the database are moved to visualization interface.
+
+* **Fetch data from database** - 
+A very important point is to read only the necessary information from the database.
+To reduce workload from fetch data it is required to develop corresponding methods.
+
+* **Transform data to user specification** - 
+It is necessary that the visualization Interface understand the transferred data from the visualization module.
+On this case something like a protocol is required.
+
+### 3.2 Functionality � User Interface
+
+#### 3.2.1 Account Management
 
 * **User creation** - 
 The User Creation works over a registration page. Therefore, we need to send the data to the database. Additionally, it will send a verification Mail to activate the account. If the activation-key at this mail is valid, the account is activated.
@@ -216,8 +221,7 @@ The user update page gives the user the possibility to change his data and to ad
 * **Password reset** - 
 To reset the password a mail with an activation key will be sent to the user (like the user activation mail in user creation) than the user gets access to the reset password page, where he is able to reset the password.
 
-#### 3.2.3 User Visualization Interface
-
+#### 3.2.2 User Visualization Interface
 
 It is an interface necessary which provide different visualization methods for the user.
 With the interface the user can request different datasets from the database.
@@ -231,71 +235,106 @@ For this the component must provide different methods for every kind of dataset 
 One more requirement are the different views for the visualization.
 The user can use different options to see and filter the datasets. 
 
-### 3.2.4 Data Visualization Module
-
-To receive all the information from the database there is an additional module required.
-With this module the specific datasets from the database are moved to visualization interface.
-
-* **Fetch data from database** - 
-A very important point is to read only the necessary information from the database.
-To reduce workload from fetch data it is required to develop corresponding methods.
-
-* **Transform data to user specification** - 
-It is necessary that the visualization Interface understand the transferred data from the visualization module.
-On this case something like a protocol is required.
-
 ### 3.3 Usability
+
+**tbd**
 
 ### 3.4 Reliability
 
+**tbd**
+
 #### 3.4.1 Availability
+
+**tbd**
 
 #### 3.4.2 MTBF, MTTR
 
+**tbd**
+
 #### 3.4.3 Accuracy
+
+**tbd**
 
 #### 3.4.4 Bug classes
 
+**tbd**
+
 ### 3.5 Performance
+
+**tbd**
 
 #### 3.5.1 Response time
 
+**tbd**
+
 #### 3.5.2 Throughput
+
+**tbd**
 
 #### 3.5.3 Capacity
 
+**tbd**
+
 #### 3.5.4 Resource utilization
+
+**tbd**
 
 ### 3.6 Supportability
 
+**tbd**
+
 ### 3.7 Design Constraints
+
+**tbd**
 
 #### 3.7.1 Development tools
 
-#### 3.7.2 Spring Boot
+**tbd**
 
-#### 3.7.3 ReactJS
+#### 3.7.2 Supported Platforms
 
-#### 3.7.4 Supported Platforms
+**tbd**
 
 ### 3.8 Online User Documentation and Help System Requirements
 
+**tbd**
+
 ### 3.9 Purchased Components
+
+**tbd**
 
 ### 3.10 Interfaces
 
+**tbd**
+
 #### 3.10.1 User Interfaces
+
+**tbd**
 
 #### 3.10.2 Hardware Interfaces
 
+**tbd**
+
 #### 3.10.3 Software Interfaces
+
+**tbd**
 
 #### 3.10.4 Communications Interfaces
 
+**tbd**
+
 ### 3.11 Licensing Requirements
+
+**tbd**
 
 ### 3.12 Legal, Copyright and other Notices
 
+**tbd**
+
 ### 3.13 Applicable Standards
 
+**tbd**
+
 ## 4. Supporting Information
+
+**tbd**

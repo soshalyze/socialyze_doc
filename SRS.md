@@ -114,15 +114,8 @@ The exact details will be worked out in future.
 
 ### 1.4 References
 
-| Title                                                                                                 | Date       |
-| ----------------------------------------------------------------------------------------------------- | ---------- |
-| [Blog](https://flashcardcommunity.wordpress.com/)                                                     | 17/10/2018 |
-| [GitHub](https://github.com/phoenixfeder/fc-com/)                                                     | 17/10/2018 |
-| [Spring Boot](https://spring.io/projects/spring-boot)                                                 | 19/10/2018 |
-| [ReactJS](https://reactjs.org/)                                                                       | 19/10/2018 |
-| [Use Case Diagram](https://github.com/phoenixfeder/fc-com/blob/master/FlashCardCommunityUseCases.png) | 21/10/2018 |
-
 **tbd**
+
 ### 1.5 Overview
 
 The following chapter provides an overview of this project with vision, the functionality of the result and an Overall Use Case Diagram. 

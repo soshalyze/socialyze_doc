@@ -197,37 +197,44 @@ Mozilla Firefox, Google Chrome, and Microsoft Edge (as of 18/10/2020).
 ### 3.2 Functionality � User Interface
 
 #### 3.2.1 Data Acquisition Module
-* **Retrieve data from Social Media** - For Data visualization we need lots of data, which is needed to question from social media platforms. Therefore, we have two options: 
-**Getting data Via API**
-If we get the data via the API of a social-media network we have the borders of a maximum of API calls. If a user wants small datasets visualized this is an easy possibility to get this data.
-**Getting data Via scraping**
+
+* **Retrieve data from Social Media** - 
+For Data visualization we need lots of data, which is needed to question from social media platforms.
+Therefore, we have two options: 
+
+  * **Getting data Via API** - 
+If we get the data via the API of a social-media network we have the borders of a maximum of API calls.
+If a user wants small datasets visualized this is an easy possibility to get this data.
+
+  * **Getting data Via scraping** -
 If we question this Data via scraping, we do simulate normal access to the social media network and read the data directly from the website. For this we want to use Python, but we need to check if therefore the Django or the Selenium framework works better. 
-* **Write to DB**
+
+* **Write to DB** -
 After getting the data from social Media we’re going to write the scraped data to our Database, that we can visualize this data later.
 
 #### 3.2.2 Account Management
-* **User creation**
+
+* **User creation** - 
 The User Creation works over a registration page. Therefore, we need to send the data to the database. Additionally, it will send a verification Mail to activate the account. If the activation-key at this mail is valid, the account is activated.
-* **User login**
+* **User login** - 
 The User Login should login the user. Therefore, we compare the typed in login data with the data from the database. Furthermore a remember me functionality should be available. There will also be a function which redirects the User to the Login Page if he isn’t logged in.
-* **User update**
+* **User update** - 
 The user update page gives the user the possibility to change his data and to add additional data like a profile image. 
-* **Password reset**
+* **Password reset** - 
 To reset the password a mail with an activation key will be sent to the user (like the user activation mail in user creation) than the user gets access to the reset password page, where he is able to reset the password.
 
 #### 3.2.3 User Visualization Interface
 
+
 It is an interface necessary which provide different visualization methods for the user.
 With the interface the user can request different datasets from the database.
 
-##### 3.2.3.1 Select different datasets from database
-
+* **Select different datasets from database** - 
 Through the fact that the user can filter information.
 The interface needs the possibility to get specific datasets from the database.
 For this the component must provide different methods for every kind of dataset which is requested.
 
-##### 3.2.3.2 Selection of different views
-
+* **Selection of different views** - 
 One more requirement are the different views for the visualization.
 The user can use different options to see and filter the datasets. 
 
@@ -236,15 +243,14 @@ The user can use different options to see and filter the datasets.
 To receive all the information from the database there is an additional module required.
 With this module the specific datasets from the database are moved to visualization interface.
 
-#### 3.2.4.1 Fetch data from database
-
+* **Fetch data from database** - 
 A very important point is to read only the necessary information from the database.
 To reduce workload from fetch data it is required to develop corresponding methods.
 
-#### 3.2.4.2 Transform data to user specification
-
+* **Transform data to user specification** - 
 It is necessary that the visualization Interface understand the transferred data from the visualization module.
 On this case something like a protocol is required.
+
 ### 3.3 Usability
 
 ### 3.4 Reliability

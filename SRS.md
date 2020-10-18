@@ -17,9 +17,7 @@
     -   [2. Overall Description](#2-overall-description)
 
         -   [2.1 Vision](#21-vision)
-
-    -   [2.2 Product perspective](#22-product-perspective)
-
+        -   [2.2 Product perspective](#22-product-perspective)
         -   [2.3 User characteristics](#23-user-characteristics)
         -   [2.4 Dependencies](#24-dependencies)
 
@@ -29,10 +27,10 @@
 
         -   [3.2 Functionality - Frontend](#32-functionality--user-interface)
 
-            -   [3.2.1 User system](#321-user-system)
-            -   [3.2.3 Flashcard boxes](#323-flashcard-boxes)
-            -   [3.2.4 Flashcards](#324-flashcards)
-            -   [3.2.5 Statistics](#325-statistics)
+            -   [3.2.1 Data Acquisition Modul](#321-Data-Acquisition-Modul)
+            -   [3.2.2 Account Management](#322-Account-Management)
+            -   [3.2.3 User Visualization Interface](#323-User-Visualization-Interface)
+            -   [3.2.4 Data Visualization Module](#324-Data-Visualization-Module)
 
         -   [3.3 Usability](#33-usability)
 

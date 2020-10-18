@@ -82,15 +82,7 @@
 
 ### 1.1 Purpose
 
-This Software Requirements Specification (SRS) was created to collect and organize the requirements for the Socialyze website. 
-The SRS describes all specifications for the application "Socialyze". 
-It includes an overview about this project and its vision, detailed information about the planned features and boundary conditions of the development process. Also it describes the behavior and use cases of our software artifact.
-
 ### 1.2 Scope
-
-This application will be an information visualization web application where users can create custom visualizations of social network trends, user networks, and other public information. 
-Users will be able to choose from a selection of websites and datasets to create visualizations in order to better study or portray social media trends and topics. The site will offer an interactive graphical interface over which the users can select datasets and types of visualizations (bar graphs, diagrams, network graphs). Modifications to the visualization's settings will be immediately visible to the user. If possible (and relevant), the visualized datasets will show live updates.
-The exact details will be worked out in future.
 
 ### 1.3 Definitions, Acronyms and Abbreviations
 
@@ -105,10 +97,6 @@ The exact details will be worked out in future.
 | **HTTP** | Hypertext Transfer Protocol         |
 | **FAQ**  | Frequently Asked Questions          |
 | **REST** | Representational State Transfer     |
-| **n/a**  | not applicable                      |
-| **tbd**  | to be determined                    |
-
-tbd
 
 ### 1.4 References
 
@@ -120,13 +108,7 @@ tbd
 | [ReactJS](https://reactjs.org/)                                                                       | 19/10/2018 |
 | [Use Case Diagram](https://github.com/phoenixfeder/fc-com/blob/master/FlashCardCommunityUseCases.png) | 21/10/2018 |
 
-tbd
-
 ### 1.5 Overview
-
-The following chapter provides an overview of this project with vision, the functionality of the result and an Overall Use Case Diagram. The third chapter (Requirements Specification) delivers more details about the specific requirements in terms of functionality, usability and design parameters. In order to achieve a high level of specification in defining the requirements, all functions presented in the diagram are separated into subsections of section "3.1 Functionality". And last there is chapter four with supporting information.
-
-
 
 ## 2. Overall Description
 
@@ -183,6 +165,23 @@ For development purposes, the team will limit itself to developing the app for u
 Mozilla Firefox, Google Chrome, and Microsoft Edge (as of 18/10/2020).
 
 ## 3. Specific Requirements
+### Data Acquisition Module
+* **Retrieve data from Social Media** - For Data visualization we need lots of data, which is needed to question from social media platforms. Therefore, we have two options: 
+**Getting data Via API**
+If we get the data via the API of a social-media network we have the borders of a maximum of API calls. If a user wants small datasets visualized this is an easy possibility to get this data.
+**Getting data Via scraping**
+If we question this Data via scraping, we do simulate normal access to the social media network and read the data directly from the website. For this we want to use Python, but we need to check if therefore the Django or the Selenium framework works better. 
+* **Write to DB**
+After getting the data from social Media we’re going to write the scraped data to our Database, that we can visualize this data later.
+### Account Management
+* **User creation**
+The User Creation works over a registration page. Therefore, we need to send the data to the database. Additionally, it will send a verification Mail to activate the account. If the activation-key at this mail is valid, the account is activated.
+* **User login**
+The User Login should login the user. Therefore, we compare the typed in login data with the data from the database. Furthermore a remember me functionality should be available. There will also be a function which redirects the User to the Login Page if he isn’t logged in.
+* **User update**
+The user update page gives the user the possibility to change his data and to add additional data like a profile image. 
+* **Password reset**
+To reset the password a mail with an activation key will be sent to the user (like the user activation mail in user creation) than the user gets access to the reset password page, where he is able to reset the password.
 
 ### 3.1 Functionality � Data Backend
 

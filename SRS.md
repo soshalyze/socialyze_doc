@@ -231,12 +231,17 @@ Through the fact that the user can filter information.
 The interface needs the possibility to get specific datasets from the database.
 For this the component must provide different methods for every kind of dataset which is requested.
 
+Activity Diagram:
 ![Dataset Selection Activity Diagram](imgs/ActivityChartSelectDataset.png)
+
+Mockup:
+![Dataset Selection Mockup](imgs/viz_selectDataset_mockup.png)
 
 * **Selection of different views** - 
 One more requirement are the different views for the visualization.
 The user can use different options to see and filter the datasets. 
 
+Mockup:
 ![Visualization Selection Mockup](imgs/viz_creation_mockup.png)
 
 ### 3.3 Usability

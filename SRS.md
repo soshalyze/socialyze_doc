@@ -241,6 +241,10 @@ Mockup:
 One more requirement are the different views for the visualization.
 The user can use different options to see and filter the datasets. 
 
+Activity Diagram:
+![Visualization Selection Mockup](ChooseVisualizationType.png)
+
+
 Mockup:
 ![Visualization Selection Mockup](imgs/viz_creation_mockup.png)
 

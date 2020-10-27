@@ -177,6 +177,10 @@ Mozilla Firefox, Google Chrome, and Microsoft Edge (as of 18/10/2020).
 
 ## 3. Specific Requirements
 
+### Use Case Diagram
+
+![Use Case Diagram](imgs/use_case_diagram.png)
+
 ### 3.1 Functionality � Data Backend
 
 #### 3.1.1 Data Acquisition Module
@@ -231,22 +235,13 @@ Through the fact that the user can filter information.
 The interface needs the possibility to get specific datasets from the database.
 For this the component must provide different methods for every kind of dataset which is requested.
 
-Activity Diagram:
-![Dataset Selection Activity Diagram](imgs/ActivityChartSelectDataset.png)
+See also: [Select Dataset Use Case Description](select_dataset.md)
 
-Mockup:
-![Dataset Selection Mockup](imgs/viz_selectDataset_mockup.png)
-
-* **Selection of different views** - 
+* **Selection of different views** -
 One more requirement are the different views for the visualization.
-The user can use different options to see and filter the datasets. 
+The user can use different options to see and filter the datasets.
 
-Activity Diagram:
-![Visualization Selection Mockup](ChooseVisualizationType.png)
-
-
-Mockup:
-![Visualization Selection Mockup](imgs/viz_creation_mockup.png)
+See also: [Select Visualization Use Case Description](select_visualization.md)
 
 ### 3.3 Usability
 

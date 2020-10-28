@@ -14,7 +14,7 @@ After selecting a dataset, a user can choose compatible visualization types to v
 
 ### 2.1.1 Activity Diagram
 
-![Select Visualization Activity Diagram](imgs/ChooseVisualizationType.png)
+![Select Visualization Activity Diagram](imgs/ChooseVisualization.png)
 
 ### 2.1.2 Mock-up
 

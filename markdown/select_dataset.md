@@ -16,11 +16,11 @@ Otherwise, it is retrieved from the social media site's API or via web scraping.
 
 ### 2.1.1 Activity Diagram
 
-![Select Dataset Activity Diagram](imgs/ActivityChartSelectDataset.png)
+![Select Dataset Activity Diagram](../imgs/ActivityChartSelectDataset.png)
 
 ### 2.1.2 Mock-up
 
-![Select Dataset Form Wireframe](imgs/viz_selectDataset_mockup.png)
+![Select Dataset Form Wireframe](../imgs/viz_selectDataset_mockup.png)
 
 ### 2.1.3 Narrative
 

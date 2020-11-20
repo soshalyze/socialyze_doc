@@ -1,6 +1,6 @@
-#Materialize css - die Basics
+# Materialize css - die Basics
 
-##Intro
+## Intro
 Materialize css ist ein Front-End-Framework basierend auf Material Design
 
 Materialize.css wurde von Google mit dem Ziel leicht ein einheitliches design in jeder (Web-)Anwendung zu implementieren entwickelt. Im folgenden gibt's einen kurzen Überblick über die wichtigsten Funktionen vom Materialize css.
@@ -8,11 +8,11 @@ Materialize.css wurde von Google mit dem Ziel leicht ein einheitliches design in
 Materialize.css besteht dabei aus einer einzigen .css datei, in welcher sehr klug sehr viele Designmöglichkeiten verpackt wurden. (diese ist bei uns durch das django-standard html automatisch eingebunden worden)
 
 
-##Wie wende ich das an?
-
+## Wie wende ich das an?
+ 
 Bei jedem html-tag gibt es die Eigenschaft class, über diese kann das komplette tag designt werden.
 
-###Coloring
+### Coloring
 wenn ich einem div-tag eine hintergrundfarbe geben will schreibe ich also
 
 ![](..\imgs\Tutorial-Imgs\MaterializeCss\1.png)  
@@ -32,7 +32,7 @@ Das sieht dann so aus:
 
 Wenn man keine Helligkeitsstufe angibt wird einfach nur die Farbe angezeigt (ohne veränderte Helligkeit).
 
-###Grid
+### Grid
 
 Eine Website besteht normalerweise immer aus einer Gitterstruktur (früher hat man Tabellen verwendet, heute nimmt man div-tags, da diese unabhängig voneinander sind)
 
@@ -61,7 +61,7 @@ Außerdem kann man z.B. mit der offset-Eigenschaft eine Spalte verschieben. offs
 
 Weitere coole features zum grid unter: https://materializecss.com/grid.html
 
-###Material-icons
+### Material-icons
 
 In Materialize ist ein großer pool an verschiedenen icons integriert. Um diese einzufügen verwendet man den html-i-tag:
 
@@ -73,7 +73,7 @@ Man kann die Icons in folgenden verschiedenen Größen anzeigen lassen, dazu ein
 
 unter folgendem Link findet sich eine Liste aller Icons: https://materializecss.com/icons.html
 
-###Weiteres
+### Weiteres
 
 Da jede Klassenart für jeden html-tag zu erklären für diesen Zweck den Rahmen sprengen würde, war das hier des nur ein überblick über die allerwichtigsten funktionen von Materialize, um ein halbwegs vernünftiges Design zu erstellen.
 

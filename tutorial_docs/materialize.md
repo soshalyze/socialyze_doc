@@ -15,15 +15,18 @@ Bei jedem html-tag gibt es die Eigenschaft class, über diese kann das komplette
 ### Coloring
 wenn ich einem div-tag eine hintergrundfarbe geben will schreibe ich also
 
-![](/imgs/Tutorial-Imgs/MaterializeCss/1.png)  
+![](/imgs/Tutorial-Imgs/MaterializeCss/1.png)
+
 Man schreibt also: class="div-art | Farbe | Helligkeit"
 
 alle Farben mit allen Helligkeiten sind hier aufgelistet: https://materializecss.com/color.html
 
 Das beispiel-div würde dann so aussehen:
+
 ![](/imgs/Tutorial-Imgs/MaterializeCss/2.PNG)  
 
 Wenn man einen Text einfärben möchte nimmt man die eigenschaft color-text und text-darken/lighten-helligkeitsstufe
+
 ![](/imgs/Tutorial-Imgs/MaterializeCss/3.PNG)  
 
 Das sieht dann so aus:
@@ -63,6 +66,7 @@ Weitere coole features zum grid unter: https://materializecss.com/grid.html
 ### Material-icons
 
 In Materialize ist ein großer pool an verschiedenen icons integriert. Um diese einzufügen verwendet man den html-i-tag:
+
 ![](/imgs/Tutorial-Imgs/MaterializeCss/11.PNG)  
 
 Man kann die Icons in folgenden verschiedenen Größen anzeigen lassen, dazu einfach die class umbenennen

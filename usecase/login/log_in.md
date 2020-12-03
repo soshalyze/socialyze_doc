@@ -14,11 +14,11 @@ For this he has to enter the correct password and username.
 
 ### 2.1.1 Activity Diagram
 
-![Log in Diagram](../imgs/activity_log_in.png)
+![Log in Diagram](activity_log_in.png)
 
 ### 2.1.2 Mock-Up
 
-![Log in Mock-Up](../imgs/viz_login_mockup.png)
+![Log in Mock-Up](viz_login_mockup.png)
 
 ### 2.1.3 Narrative
 

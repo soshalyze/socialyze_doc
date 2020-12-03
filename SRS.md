@@ -179,7 +179,7 @@ Mozilla Firefox, Google Chrome, and Microsoft Edge (as of 18/10/2020).
 
 ### Use Case Diagram
 
-![Use Case Diagram](imgs/use_case_diagram.png)
+![Use Case Diagram](usecase/use_case_diagram.png)
 
 ### 3.1 Functionality � Data Backend
 
@@ -235,13 +235,13 @@ Through the fact that the user can filter information.
 The interface needs the possibility to get specific datasets from the database.
 For this the component must provide different methods for every kind of dataset which is requested.
 
-See also: [Select Dataset Use Case Description](markdown/select_dataset.md)
+See also: [Select Dataset Use Case Description](usecase/selectDataset/select_dataset.md)
 
 * **Selection of different views** -
 One more requirement are the different views for the visualization.
 The user can use different options to see and filter the datasets.
 
-See also: [Select Visualization Use Case Description](markdown/select_visualization.md)
+See also: [Select Visualization Use Case Description](usecase/selectVisualization/select_visualization.md)
 
 ### 3.3 Usability
 

@@ -22,11 +22,11 @@ The User must provide following information.
 
 ### 2.1.1 Activity Diagram
 
-![Register New User Diagram](activity_register_new_user.png)
+![Register New User Diagram](activity_CreateAccount.png)
 
 ### 2.1.2 Mock-Up
 
-![Register New User Mock-Up](../../usecase/viz_register_mockup/viz_register_mockup.png)
+![Register New User Mock-Up](mockup_CreateAccount.png)
 
 ### 2.1.3 Narrative
 

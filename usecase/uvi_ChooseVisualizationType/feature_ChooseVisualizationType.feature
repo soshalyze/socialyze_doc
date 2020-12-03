@@ -16,4 +16,4 @@ Scenario: User selects an invalid dataset handle
   And user selects visualization type karma_by_sub
   And user types in dataset invalid_dataset
   And user clicks visualize
-  Then display erro
+  Then display error

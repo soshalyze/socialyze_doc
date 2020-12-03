@@ -15,11 +15,11 @@ For the prototype, we will be using Reddit profiles as input.
 
 ### 2.1.1 Activity Diagram
 
-![Retrieve Data from Server Diagram](retrieve_data_from_server.png)
+![Retrieve Data from Server Diagram](activity_RetrieveDataFromServer.png)
 
 ### 2.1.2 Class Diagram
 
-![Retrieve Data from Server Class Diagram](../../imgs/backend_classes.png)
+![Retrieve Data from Server Class Diagram](class_RetrieveDataFromServer.png)
 
 ## 2.2 Alternative Flows
 

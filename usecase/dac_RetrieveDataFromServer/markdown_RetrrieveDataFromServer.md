@@ -11,7 +11,7 @@ For the prototype, we will be using Reddit profiles as input.
 
 - A user triggers a request to the backend with a username.
 - The social media connector fetches (part of) available data from the social media site's API.
-- Fetched data is stored in the local database.
+- Fetched data is stored in the local database and associated with the querying app user.
 
 ### 2.1.1 Activity Diagram
 
@@ -21,13 +21,19 @@ For the prototype, we will be using Reddit profiles as input.
 
 ![Retrieve Data from Server Class Diagram](class_RetrieveDataFromServer.png)
 
+### 2.1.3 Database Model
+
+![Retrieve Data from Server Database Model](er_RetrieveDataFromServer.png)
+
 ## 2.2 Alternative Flows
 
-(n/a)
+If the user profile of the targeted social media site does not exist,
+the API is currently inaccessible, or other errors occur, an error message is returned
+and must be handled by the app internals.
 
 # 3 Special Requirements
 
-(n/a)
+The API of the targeted social media site must match either the library or own code used to fetch the data.
 
 # 4 Preconditions
 
@@ -41,7 +47,7 @@ The user placing the request must be logged in.
 
 # 5 Postconditions
 
-(n/a)
+The fetched data is saved to the local database according to the outlined entity-relationship model (see 2.1.3).
  
 # 6 Extension Points
 

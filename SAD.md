@@ -27,8 +27,9 @@ The scope of this SAD is to show the architecture of the Socialyze project. Affe
 Socialyze uses the MVD Pattern from Django for its architecture design.
 
 MVT Diagram: 
+- [MVT Pattern] (https://github.com/soshalyze/socialyze_doc/blob/master/img_blog/Django_MVT-1-683x1024.jpg)
 
-https://www.pythonistaplanet.com/difference-between-mvc-and-mvt/
+
 
 ## 3.Architectural Goals and Constraints 
 We decided to use praw for the back-end as a connection to reddit and Plotty for the front-end for the visualization of the dataset.
@@ -38,6 +39,9 @@ Both components are coupled by the Rest-API.
 n/a
 
 ## 5. Logical View
+Templates aren´t no classes, in our project they are only HTML files.
+Our classes were only in model.py
+
 - [Diagram](https://github.com/soshalyze/socialyze_doc/blob/master/img_blog/LogicalView.png)
 
 
@@ -45,12 +49,7 @@ n/a
 n/a
 
 ## 7. Deployment View
-Templates aren´t no classes, in our project they are only HTML files.
-Our classes were only in model.py
-
-![Architecture][]
-
-
+n/a
 ## 8. Implementation View
 n/a
 

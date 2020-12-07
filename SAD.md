@@ -27,7 +27,7 @@ The scope of this SAD is to show the architecture of the Socialyze project. Affe
 Socialyze uses the MVD Pattern from Django for its architecture design.
 
 MVT Diagram: 
-- [MVT Pattern] (https://github.com/soshalyze/socialyze_doc/blob/master/img_blog/Django_MVT-1-683x1024.jpg)
+- [MVT Pattern](https://github.com/soshalyze/socialyze_doc/blob/master/img_blog/Django_MVT-1-683x1024.jpg)
 
 
 

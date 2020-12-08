@@ -32,7 +32,7 @@ MVT Diagram:
 
 
 ## 3.Architectural Goals and Constraints 
-We decided to use praw for the back-end as a connection to reddit and Plotty for the front-end for the visualization of the dataset.
+We decided to use praw for the back-end as a connection to reddit and Plotly for the front-end for the visualization of the dataset.
 Both components are coupled by the Rest-API. 
 
 ## 4. Use-Case View 

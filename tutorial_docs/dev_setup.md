@@ -30,5 +30,6 @@
 ## Set up App Dependencies and Run the Django App
 
 1. In your virtual environment, run `pip install -r requirements.txt`.
-2. Run the migration script with `python manage.py migrate`.
-3. Run the Django app with `python manage.py runserver`.
+2. Create database migration scripts by running `python manage.py makemigrations`.
+3. Run the migration script with `python manage.py migrate`.
+4. Run the Django app with `python manage.py runserver`.

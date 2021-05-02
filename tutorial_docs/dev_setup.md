@@ -13,6 +13,7 @@
 2. Create a new user and database for the Django app (don't forget the semicolons).
     * `CREATE USER socialyze WITH PASSWORD 'socialyze123';`
     * `CREATE DATABASE socialyze WITH OWNER=socialyze;`
+    * `ALTER USER socialyze WITH createdb;`
 3. Exit the console with the `exit` command. You now have a database owned by a user called `socialyze`.
 
 ## Clone the Git Repository and add the Heroku Remote

@@ -11,6 +11,8 @@ For concrete information on UI elements and callback construction see the [Dash 
 
 ## Example: The Subreddit Karma Visualization
 
+![Data Filter](../gifs/filter_demo.gif)
+
 The following section describes the implementation of a sample Dash app for use within Socialyze.
 The app visualizes a Reddit user's cumulative Karma (post or comment) over all subreddits they've commented in.
 Additionally, the Socialyze user may filter the data points by a minimum or maximum point threshold for the individual comments.

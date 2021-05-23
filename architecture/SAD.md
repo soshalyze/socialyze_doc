@@ -10,13 +10,15 @@ It is intended to capture and convey the significant architectural decisions whi
 
 ### 1.2 Scope
 
-The scope of this SAD is to show the architecture of the Socialyze project. Affected are the class structure, the use cases and the data representation.
+This software architecture document gives a broad overview of the Socialyze app from a variety of architectural views.
+It will *not* cover every detail of the use cases described herein.
+For this information, please refer to the individual use case documents linked below.
 
 ### 1.3 References
 
 - [GitHub](https://github.com/soshalyze)
 - [Blog](https://socialyze807275475.wordpress.com/)
-- [Overall Use case diagram](https://github.com/soshalyze/socialyze_doc/blob/master/usecase/use_case_diagram.png)
+- [Use Case Overview](https://github.com/soshalyze/socialyze_doc/blob/master/usecase/use_case_diagram.png)
 - [Software Requirements Specification](SRS.MD)
 - [UC Create Account](markdown_CreateAccount.md)
 - [UC Login](markdown_Login.md)
@@ -26,24 +28,29 @@ The scope of this SAD is to show the architecture of the Socialyze project. Affe
 
 ## 2. Architectural Representation
 
-Socialyze uses the MVT Pattern from Django for its architecture design.
+As Socialyze is built on the Django web framework, it uses a Model-View-Template (MVT) architecture.
+An MVT functions similarly to the widely-used Model-View-Controller architecture.
+However, Django itself takes care of much of the controller's functionality,
+leaving the developer to focus on the view's functions and the frontend design in the templates.
 
 MVT Diagram:
 
-![MVT Pattern](https://github.com/soshalyze/socialyze_doc/blob/master/img_blog/Django_MVT-1-683x1024.jpg)
+![MVT Pattern](#DJANGOMVTHERE#)
 
 ## 3. Architectural Goals and Constraints
 
 ### 3.1 Server-Side
 
-Socialyze will be hosted on the Heroku deployment platform.
-The production app will be located at [https://soshalyze.herokuapp.com/](https://soshalyze.herokuapp.com),
-while a developer version for testing and integrating changes will be located at [https://socialyze-staging.herokuapp.com/](https://socialyze-staging.herokuapp.com/).
-These apps track the `main` and `develop` branches of the [Socialyze GitHub Repository](https://github.com/soshalyze/socialyze), respectively.
+Socialyze is hosted on the Heroku deployment platform.
+The production app is located at [the Heroku production app](https://soshalyze.herokuapp.com),
+while a developer version for testing and integrating changes is located at [the Heroku staging app](https://socialyze-staging.herokuapp.com/).
+
+The Heroku apps track the `main` and `develop` branches of the [Socialyze GitHub Repository](https://github.com/soshalyze/socialyze), respectively.
+The Travis CI build pipeline triggers a deployment to the corresponding pipeline component after a commit and successful subsequent build and test process.
 
 ### 3.2 Client-Side
 
-For access to the Socialyze webapp, clients will require a reasonably up-to-date webbrowser.
+For access to the Socialyze webapp, clients require a reasonably up-to-date webbrowser.
 All other requirements lie on the server side.
 
 ### 3.3 CI/CD Pipeline
@@ -119,10 +126,14 @@ The application as a whole can be split up into three subsystems: user managemen
 
 ### 5.1 User Management Subsystem
 
-The application `django.users.auth` provides the necessary functionality for user registration and authentication.
-Registration and Login views are implemented in the `users` package.
-The interface provided by the `auth` package is then used in the `app` subsystem that provides the main functionality of the application.
+The module `django.users.auth` provides the necessary functionality for user registration and authentication.
+The `users` package implements the Registration and Login views by using the functions provided by `django.users.auth`.
+The `app` subsystem provides the main functionality of the application.
+The database models in `app` are tied to the `User` model of the `auth` package as foreign keys.
+
 Generally, in order to use the app, a user must be registered and logged in.
+If a user is not logged in, he will be asked to do so as soon as he attempts to access the dashboard view.
+The Django-internal `django.users.auth` module manages these access restrictions.
 
 ### 5.2 Data Retrieval Subsystem
 
@@ -139,26 +150,56 @@ Using parameters passed to it from `app`'s forms/views, it creates and initializ
 
 ### 6.1 User Registration and Login
 
+![User Registration Sequence Diagram](#LOGINSEQDIAGHERE#)
+
+Upon successful login, Socialyze presents the user with his personal dashboard.
+The dashboard shows past saved visualizations.
+Additionally, the user has the option to fetch new data and create new visualizations.
+
 ### 6.2 User Data Fetch Process
+
+![User Data Fetch Sequence Diagram](#FETCHSEQDIAGHERE#)
+
+Following a successful data fetch, Socialyze presents the user with the visualization screen.
+The user may choose to instantly create a visualization with the fetched dataset, or return to the dashboard to fetch another.
 
 ### 6.3 User Visualization Creation
 
+![User Visualization Sequence Diagram](#CREATEVIZSEQDIAGHERE#)
+
+The user creates a visualization by selecting a mode, dataset, and the maximum number of data points to use in the visualization.
+These parameters are then passed to the Dash app as initial arguments.
+
 ## 7. Deployment View
 
-n/a
+![Deployment View](#DEPLOYVIEWHERE#)
 
 ## 8. Implementation View
 
-n/a
+![Implementation View](#IMPLVIEWHERE#)
 
 ## 9. Data View
 
-We're using the PostgreSQL database to store our data.
+Socialyze uses a PostgreSQL database backend.
+The database provides storage for the following information:
+
+- application user data (relations managed by the `django.auth.users` subsystem)
+- social media data (social media user handles and dataset content)
+- links between fetched datasets and users (i. e. which user fetched which dataset)
 
 ## 10. Size and Performance
 
-tbd
+Depending on the size of the userbase, the size of the database and the computing power may require upscaling.
+The current Heroku specifications are sufficient for a functional demo application.
+However, to use the app productively, the database will need an upgrade.
+Heroku currently imposes a limitation of 10,000 database rows, which a moderately sized repository of data points pulled from either Reddit or Twitter will exceed very quickly.
 
 ## 11. Quality
 
-We use PyCharm as our IDE and Django as our webframework.
+| Factor          | Architecture Impact |
+|---              |---|
+| Usability       | Socialyze uses conventional web forms for user input, inputs are filtered to make selection easier. |
+| Maintainability | Functionality is split into largely independent modules, allowing for easy customizations and extensions. |
+| Portability     | Installation requires a supported database (Django supports many different RDBMS) and a Python installation, which are readily available or configurable on most web servers. |
+| Reliability     | n/a |
+| Efficiency      | n/a |

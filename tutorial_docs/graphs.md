@@ -9,7 +9,7 @@
 
 Run the command 
 
-```
+```bash
 pip install --global-option=build_ext --global-option="-I(INSTALL_DIR)\include" --global-option="-L(INSTALL_DIR)\lib" pygraphviz
 ```
 

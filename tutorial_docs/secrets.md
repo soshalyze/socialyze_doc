@@ -19,6 +19,6 @@ In the code, replace occurrences of your data with `os.getenv('VAR_NAME')`.
 
 If the Django secret key should ever be compromised, generate a new one with the following command:
 
-```
+```bash
 python manage.py shell -c 'from django.core.management import utils; print(utils.get_random_secret_key())'
 ```

@@ -1,11 +1,10 @@
-# 1 Use-Case: Select Visualization
+# Use Case: Select Visualization
 
 ## 1.1 Brief Description
 
 After associating one or more datasets with his account, a user can choose compatible visualization types to visualize it.
 
-
-# 2 Flow of Events
+## 2 Flow of Events
 
 ## 2.1 Basic Flow
 

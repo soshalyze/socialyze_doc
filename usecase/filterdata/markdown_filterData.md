@@ -1,56 +1,56 @@
-# 1 Use-Case: Create Filtered Datasets
+# Use-Case: Create Filtered Datasets
 
-## 1.1 Brief Description
+## 1 Brief Description
 
 User will be able to filter data according to a set of predefined options.
 
-# 2 Flow of Events
+## 2 Flow of Events
 
-## 2.1 Basic Flow
+### 2.1 Basic Flow
 
-1. User selects "Create Dataset by Filtering".
-2. User selects dataset from the datasets associated to his account.
-3. User specifies filter options for the dataset.
-4. User clicks the "Create filtered dataset" button.
+1. User creates a visualization using the "Create Visualization" workflow.
+2. Visualization shows options to filter according to the dataset used.
+3. User may interactively filter the posts by certain aspects (e.g. score, date).
+4. Visualizations will respond to inputs by the user according to the filter settings.
 
-### 2.1.1 Activity Diagram
+#### 2.1.1 Activity Diagram
 
 ![Filter Data Activity Diagram](filterData.png)
 
-### 2.1.2 Mock-up
+#### 2.1.2 Mock-up
 
-n/a
+![Filter Data Mockup]
 
-### 2.1.3 Narrative
-
-n/a
-
-## 2.2 Alternative Flows
-
-1. The user does not have a dataset associated with his account, or selects an invalid dataset.
-2. A page with an error message is displayed, telling the user that his dataset handle was invalid.
-
-1. The user selects filter criteria such that his dataset is empty.
-2. No new dataset is created and a page is displayed, telling the user that his selected criteria did not match any data points from his selected set.
-
-# 3 Special Requirements
+#### 2.1.3 Narrative
 
 (n/a)
 
-# 4 Preconditions
+## 2.2 Alternative Flows
 
-## 4.1 Login
+(n/a)
+
+## 3 Special Requirements
+
+(n/a)
+
+## 4 Preconditions
+
+### 4.1 Login
 
 The user has to be logged in to the system.
 
-## 4.2 Existing Dataset
+### 4.2 Existing Dataset
 
 The user must have at least one social media dataset associated with his account.
 
-# 5 Postconditions
+### 4.3 Existing Visualization
 
-There must be a reference to the new filtered dataset in the database.
- 
-# 6 Extension Points
+The user must have created a visualization from one of his datasets.
+
+## 5 Postconditions
+
+(n/a)
+
+## 6 Extension Points
 
 (n/a)

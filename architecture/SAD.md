@@ -35,7 +35,7 @@ leaving the developer to focus on the view's functions and the frontend design i
 
 MVT Diagram:
 
-![MVT Pattern](#DJANGOMVTHERE#)
+![MVT Pattern](diags/mvtarchitecture.png)
 
 ## 3. Architectural Goals and Constraints
 
@@ -122,7 +122,11 @@ See [UC Document: Export Visualizations](#UCDOCEXPORTVIZHERE#).
 
 The application as a whole can be split up into three subsystems: user management, data retrieval, and data visualization.
 
-![Logical Module View](#LOGICALVIEWHERE#)
+![Logical Module View](diags/logicalview.png)
+
+The database consists of parts defined within the `app` subsystem and those defined by other subsystems that are not part of the scope of this document (external apps and libraries).
+
+![Database Model View](diags/app_model.png)
 
 ### 5.1 User Management Subsystem
 
@@ -150,7 +154,7 @@ Using parameters passed to it from `app`'s forms/views, it creates and initializ
 
 ### 6.1 User Registration and Login
 
-![User Registration Sequence Diagram](#LOGINSEQDIAGHERE#)
+![User Registration Sequence Diagram](diags/login.png)
 
 Upon successful login, Socialyze presents the user with his personal dashboard.
 The dashboard shows past saved visualizations.
@@ -158,25 +162,25 @@ Additionally, the user has the option to fetch new data and create new visualiza
 
 ### 6.2 User Data Fetch Process
 
-![User Data Fetch Sequence Diagram](#FETCHSEQDIAGHERE#)
+![User Data Fetch Sequence Diagram](diags/datafetch.png)
 
 Following a successful data fetch, Socialyze presents the user with the visualization screen.
 The user may choose to instantly create a visualization with the fetched dataset, or return to the dashboard to fetch another.
 
 ### 6.3 User Visualization Creation
 
-![User Visualization Sequence Diagram](#CREATEVIZSEQDIAGHERE#)
+![User Visualization Sequence Diagram](diags/createviz.png)
 
 The user creates a visualization by selecting a mode, dataset, and the maximum number of data points to use in the visualization.
 These parameters are then passed to the Dash app as initial arguments.
 
 ## 7. Deployment View
 
-![Deployment View](#DEPLOYVIEWHERE#)
+![Deployment View](diags/deployment.png)
 
 ## 8. Implementation View
 
-![Implementation View](#IMPLVIEWHERE#)
+![Implementation View](diags/implview.png)
 
 ## 9. Data View
 

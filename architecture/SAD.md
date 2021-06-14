@@ -16,15 +16,19 @@ For this information, please refer to the individual use case documents linked b
 
 ### 1.3 References
 
-- [GitHub](https://github.com/soshalyze)
+- [GitHub](https://github.com/soshalyze/socialyze)
 - [Blog](https://socialyze807275475.wordpress.com/)
-- [Use Case Overview](https://github.com/soshalyze/socialyze_doc/blob/master/usecase/use_case_diagram.png)
-- [Software Requirements Specification](SRS.MD)
-- [UC Create Account](markdown_CreateAccount.md)
-- [UC Login](markdown_Login.md)
-- [UC Retrieve Data from Server](markdown_ChooseVisualizationType.md)
-- [UC Choose Visualization](markdown_RetrrieveDataFromServer.md)
-- [UC Select Dataset](markdown_SelectDataset.md)
+- [Use Case Overview](../usecase/use_case_diagram.png)
+- [Software Requirements Specification](../usecase/SRS.md)
+- [UC Document: Data Retrieval](../usecase/fetchdata/fetchdata.md)
+- [UC Document: Choose Visualization](../usecase/choosevisualization/choosevisualization.md)
+- [UC Document: Filter Datasets](../usecase/filterdata/filterdata.md)
+- [UC Document: Save and Retrieve Visualizations](../usecase/configcrud/configcrud.md)
+- [Heroku Production App](https://soshalyze.herokuapp.com)
+- [Heroku Staging App](https://socialyze-staging.herokuapp.com)
+- [Travis CI](https://travis-ci.com/github/soshalyze/socialyze)
+- [Codacy Static Code Analysis](https://app.codacy.com/gh/soshalyze/socialyze/dashboard)
+- [Codecov.io Code Coverage Analysis](https://app.codecov.io/gh/soshalyze/socialyze)
 
 ## 2. Architectural Representation
 
@@ -47,6 +51,10 @@ while a developer version for testing and integrating changes is located at [the
 
 The Heroku apps track the `main` and `develop` branches of the [Socialyze GitHub Repository](https://github.com/soshalyze/socialyze), respectively.
 The Travis CI build pipeline triggers a deployment to the corresponding pipeline component after a commit and successful subsequent build and test process.
+
+Code quality analysis and code metrics are provided by [Codacy](https://app.codecov.io/gh/soshalyze/socialyze) and test coverage analysis and visualization is provided by [Codecov.io](https://app.codecov.io/gh/soshalyze/socialyze).
+Test coverage is and should remain around 90%, meaning the vast majority of workflow code should be covered.
+Additionally, code quality should remain at an **A** grade with the current quality control settings.
 
 ### 3.2 Client-Side
 
@@ -86,47 +94,37 @@ The following use cases define the core functionality of the app:
 - Save and Retrieve Visualizations
 - Export Visualizations
   
-![Use Case Diagram](https://github.com/soshalyze/socialyze_doc/blob/master/usecase/use_case_diagram.png)
+![Use Case Diagram](../usecase/use_case_diagram.png)
 
 ### 4.1 Retrieve Data From Server
 
 *Brief Description*: Logged-in users are able to trigger the retrieval of content and associated metadata (submission date, karma/like count, etc.) for a given social media user handle. The retrieved data is stored in the app database.
 
-See [UC Document: Data Retrieval](#UCDOCRETRIEVEDATAHERE#).
+See [UC Document: Data Retrieval](../usecase/fetchdata/fetchdata.md).
 
 ### 4.2 Choose Visualization Type and Parameters
 
 *Brief Description*: Logged-in users may select from an assortment of visualization modes and submit their retrieved datasets for visualization.
 
-See [UC Document: Choose Visualization](#UCDOCCHOOSEVIZHERE#).
+See [UC Document: Choose Visualization](../usecase/choosevisualization/choosevisualization.md).
 
 ### 4.3 Filter Datasets
 
 *Brief Description*: After creating a visualization, a user may filter the data by predefined parameters, interactively changing the visualization.
 
-See [UC Document: Filter Datasets](#UCDOCFILTERDATAHERE#).
+See [UC Document: Filter Datasets](../usecase/filterdata/filterdata.md).
 
 ### 4.4 Save and Retrieve Visualizations
 
 *Brief Description*: Users may save visualizations after creating them. The associated parameters and modalities are saved to the app database, where the user may retrieve them at a later date or subsequent login.
 
-See [UC Document: Save and Retrieve Visualizations](#UCDOCSAVEVIZHERE#).
-
-### 4.5 Export Visualizations
-
-*Brief Description*: Users may export their visualizations in Portable Network Graphic (PNG) format and download them together with a CSV of the visualization's associated dataset.
-
-See [UC Document: Export Visualizations](#UCDOCEXPORTVIZHERE#).
+See [UC Document: Save and Retrieve Visualizations](../usecase/configcrud/configcrud.md).
 
 ## 5. Logical View
 
 The application as a whole can be split up into three subsystems: user management, data retrieval, and data visualization.
 
 ![Logical Module View](diags/logicalview.png)
-
-The database consists of parts defined within the `app` subsystem and those defined by other subsystems that are not part of the scope of this document (external apps and libraries).
-
-![Database Model View](diags/app_model.png)
 
 ### 5.1 User Management Subsystem
 
@@ -190,6 +188,10 @@ The database provides storage for the following information:
 - application user data (relations managed by the `django.auth.users` subsystem)
 - social media data (social media user handles and dataset content)
 - links between fetched datasets and users (i. e. which user fetched which dataset)
+
+The database consists of parts defined within the `app` subsystem and those defined by other subsystems that are not part of the scope of this document (external apps and libraries).
+
+![Database Model View](diags/app_model.png)
 
 ## 10. Size and Performance
 

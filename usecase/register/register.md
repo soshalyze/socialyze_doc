@@ -21,13 +21,15 @@ The user must provide following information.
 
 #### 2.1.1 Activity Diagram
 
-![Register New User Diagram](activity_CreateAccount.png)
+![Register New User Diagram](register.png)
 
 #### 2.1.2 Mock-Up
 
-![Register New User Mock-Up](mockup_CreateAccount.png)
+![Register New User Mock-Up](../../mockup/register_form.png)
 
 #### 2.1.3 Narrative
+
+[Register Feature File](register.feature)
 
 ### 2.2 Alternative Flows
 

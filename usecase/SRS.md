@@ -163,7 +163,7 @@ Mozilla Firefox, Google Chrome, and Microsoft Edge (as of 18/10/2020).
 
 ### Use Case Diagram
 
-![Use Case Diagram](usecase/use_case_diagram.png)
+![Use Case Diagram](use_case_diagram.png)
 
 ### 3.1 Functionality - Backend
 

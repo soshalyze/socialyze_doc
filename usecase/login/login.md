@@ -14,13 +14,15 @@ For this he has to enter the correct password and username.
 
 #### 2.1.1 Activity Diagram
 
-![Log in Diagram](activity_Login.png)
+![Log in Diagram](login.png)
 
 #### 2.1.2 Mock-Up
 
-![Log in Mock-Up](mockup_Login.png)
+![Log in Mock-Up](../../mockup/login_form.png)
 
 #### 2.1.3 Narrative
+
+[Login Feature File](login.feature)
 
 ### 2.2 Alternative Flows
 

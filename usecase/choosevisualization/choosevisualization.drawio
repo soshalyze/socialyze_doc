@@ -1,6 +1,6 @@
 <mxfile>
     <diagram id="qiJ68fFvvVzYDLmA62VG" name="Page-1">
-        <mxGraphModel dx="1132" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1118" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -31,7 +31,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="tvlWzFpPiQR5WW-yxeFQ-9" value="User enters a social media user handle" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="1" vertex="1">
+                <mxCell id="tvlWzFpPiQR5WW-yxeFQ-9" value="User selects a social media user handle" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="1" vertex="1">
                     <mxGeometry x="155" y="485" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="tvlWzFpPiQR5WW-yxeFQ-10" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;" parent="1" source="tvlWzFpPiQR5WW-yxeFQ-9" edge="1">
@@ -56,7 +56,7 @@
                         <mxPoint x="220" y="485" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="tvlWzFpPiQR5WW-yxeFQ-17" value="ERROR: Invalid social media handle" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="1" vertex="1">
+                <mxCell id="tvlWzFpPiQR5WW-yxeFQ-17" value="ERROR: No social media user selected" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="1" vertex="1">
                     <mxGeometry x="370" y="485" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="tvlWzFpPiQR5WW-yxeFQ-23" value="&lt;font color=&quot;#000000&quot;&gt;Dataset exists&lt;br&gt;and user owns it&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffc0;strokeColor=#ff0000;" parent="1" vertex="1">

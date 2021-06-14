@@ -14,15 +14,17 @@ This use case describes the retrieval of user data (e.g. posts and comments) fro
 
 #### 2.1.1 Activity Diagram
 
-![Retrieve Data from Server Diagram](activity_RetrieveDataFromServer.png)
+![Retrieve Data from Server Diagram](fetchdata.png)
 
-#### 2.1.2 Class Diagram
+#### 2.1.2 Mockup
 
-![Retrieve Data from Server Class Diagram](class_RetrieveDataFromServer.png)
+![Data Fetch Form Mockup](../../mockup/fetch_form.png)
 
 #### 2.1.3 Database Model
 
-![Retrieve Data from Server Database Model](er_RetrieveDataFromServer.png)
+Data structure for social media data is represented in the `app` section of the below DB model diagram.
+
+![Retrieve Data from Server Database Model](../../architecture/diags/app_model.png)
 
 ### 2.2 Alternative Flows
 

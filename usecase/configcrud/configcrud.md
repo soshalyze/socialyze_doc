@@ -28,13 +28,21 @@ Users will also be able to delete previously saved configurations.
 
 #### 2.1.4 Activity Diagram
 
-![Save Configuration Activity Diagram](saveConfig.png)
+![Save Configuration Activity Diagram](configcrud.png)
 
-### 2.1.5 Mock-up
+#### 2.1.5 Database Model
 
-(n/a)
+The class `UserVisualization` represents the users' visualizations saved to the database.
 
-### 2.1.6 Narrative
+![Configuration CRUD Database Model](../../architecture/diags/app_model.png)
+
+#### 2.1.5 Mock-up
+
+![Configuration CRUD Mockup Dashboard](../../mockup/dash_select.png)
+
+![Configuration CRUD Mockup Visualization](../../mockup/viz_view.png)
+
+#### 2.1.6 Narrative
 
 (n/a)
 

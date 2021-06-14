@@ -1,4 +1,4 @@
-# Use-Case: Create Filtered Datasets
+# Use-Case: Filter Datasets and Visualizations
 
 ## 1 Brief Description
 
@@ -15,11 +15,11 @@ User will be able to filter data according to a set of predefined options.
 
 #### 2.1.1 Activity Diagram
 
-![Filter Data Activity Diagram](filterData.png)
+![Filter Data Activity Diagram](filterdata.png)
 
 #### 2.1.2 Mock-up
 
-![Filter Data Mockup]
+![Filter Data Mockup](../../mockup/viz_view.png)
 
 #### 2.1.3 Narrative
 
